@@ -3,23 +3,78 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder
-        position="1 0.75 -3"
-        radius="0.5"
-        height="1.5"
-        color="#FFC65D"
-      ></a-cylinder>
-      <a-plane
-        position="0 0 -4"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-      ></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+    <a-scene> 
+      <!-- first is left-right, second is up-down and third is front-back -->
+      <a-box position="0 1 -5.5" rotation="0 0 0" 
+        width = "3"
+        height = "4.5"
+        depth = "0.1"
+        color="#492064">
+      </a-box>
+      <a-box position="0 1 -5.5" rotation="0 0 0" 
+        width = "3.2"
+        height = "4.7"
+        depth = "0"
+        color="#c88fa0">
+      </a-box>
+      <a-box position="0 1 -5.5" rotation="0 0 0" 
+        width = "3.4"
+        height = "4.9"
+        depth = "-0.5"
+        color="#c19da7">
+      </a-box>
+      <a-plane position="0 1 -5.45" rotation="0 0 0"
+        width="2.8"
+        height="4.3"
+        color="#5D8AA9"
+        opacity="0.8"
+        material="side: double">
+      </a-plane>
+      <a-cylinder position="0 2 -5.45" rotation="0 0 90"
+        radius ="0.05"
+        height = "2.8"
+        color = "#492064">
+      </a-cylinder>
+      <a-cylinder position="0 0 -5.45" rotation="0 0 90"
+        radius ="0.05"
+        height = "2.8"
+        color = "#492064">
+      </a-cylinder>
+      <a-sphere position="0.7 2.3 -5.45" rotation="0 0 0"
+        radius = "0.57"
+        color = "#f6e3ab">
+      </a-sphere>
+      <a-sphere position="-0.7 2.6 -5.45" rotation="0 0 0"
+        radius = "0.28"
+        color = "#493357">
+      </a-sphere>
+      <a-cylinder position="0 1 -5.45"
+        depth = "0.1"
+        radius ="0.05"
+        height = "4.3"
+        color = "#492064">
+      </a-cylinder>
+      <a-plane position="0 -1.3 -5.45" rotation="-30 0 90"
+        depth="-0.1"
+        width="1.5"
+        height="3"
+        color="#492064">
+      </a-plane>
+      <!-- Black cat entity -->
+    <a-entity position="-0.4 -0.6 -4" scale="0.5 0.5 0.5" rotation="0 0 0">
+      <!-- Cat body -->
+      <a-box color="black" depth="1" height="1" width="1"></a-box>
+      <!-- Cat head -->
+      <a-sphere color="black" radius="0.5" position="0 1.25 0"></a-sphere>
+      <!-- Cat ears -->
+      <a-cone color="black" height="0.5" radius-bottom="0.3" radius-top="0" position="-0.3 1.75 0" rotation="0 -45 45"></a-cone>
+      <a-cone color="black" height="0.5" radius-bottom="0.3" radius-top="0" position="0.5 1.75 0" rotation="0 180 45"></a-cone>
+    </a-entity>
+    
+    
+
+      <a-camera position="0 1.6 0"></a-camera>
+      <a-sky color="#ac4685"></a-sky>
     </a-scene>
   </body>
 </html>
